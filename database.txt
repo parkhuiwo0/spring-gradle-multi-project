@@ -1,0 +1,36 @@
+server:
+  port: 80
+
+spring:
+  profiles:
+    active: local
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/study?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: root
+    password: 1q2w3e4r
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        # show_sql: true
+        format_sql: true
+
+
+
+        package com.parkhuiwo0.multimodule;
+
+        import org.springframework.boot.SpringApplication;
+        import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+        @SpringBootApplication
+        public class MultiModuleApplication {
+
+        	public static void main(String[] args) {
+        		SpringApplication.run(MultiModuleApplication.class, args);
+        	}
+
+        }
+
